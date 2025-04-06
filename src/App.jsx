@@ -1,26 +1,33 @@
 // src/App.jsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navigation from './components/Navigation'
-import Home from './pages/Home'
-import Favorites from './pages/Favorites'
-import Login from './pages/Login'
-import MovieDetails from './pages/MovieDetails'
+import { useState } from 'react';
+import MovieSearch from './components/MovieSearch';
+import MovieDetails from './components/MovieDetails';
 
 function App() {
+  const [selectedMovieId, setSelectedMovieId] = useState(null);
+
+  const openMovieDetails = (imdbId) => {
+    setSelectedMovieId(imdbId);
+  };
+
+  const closeMovieDetails = () => {
+    setSelectedMovieId(null);
+  };
+
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-100">
-        <h1 className="text-blue-500 text-3xl font-bold">Hello Tailwind!</h1>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/movie/:id" element={<MovieDetails />} />
-        </Routes>
-      </div>
-    </Router>
-  )
+    <div className="min-h-screen bg-gray-50">
+      {/* Modified MovieSearch to handle movie selection */}
+      <MovieSearch onSelectMovie={openMovieDetails} />
+      
+      {/* Movie Details Modal */}
+      {selectedMovieId && (
+        <MovieDetails 
+          imdbId={selectedMovieId} 
+          onClose={closeMovieDetails} 
+        />
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
