@@ -28,8 +28,8 @@ A responsive movie database web app that allows users to search for movies, view
 🎨 UI Design (Figma)
 You can preview the full UI design, wireframes, and flow on Figma:
 
-🔗 View Figma Prototype: https://www.figma.com/proto/Zb5AWAzO19tetigoDVffhj/FE-Capstone-Part-2-%3A-Design-Phase?page-id=9%3A866&node-id=9-867&viewport=281%2C-51%2C0.5&t=0C8LxX49lA86cDW9-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=9%3A867.
-
+🔗 View Figma Prototype: [https://www.figma.com/proto/Zb5AWAzO19tetigoDVffhj/FE-Capstone-Part-2-%3A-Design-Phase?page-id=9%3A866&node-id=9-867&viewport=281%2C-51%2C0.5&t=0C8LxX49lA86cDW9-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=9%3A867.
+](https://www.figma.com/design/Zb5AWAzO19tetigoDVffhj/FE-Capstone-Part-2-%3A-Design-Phase?node-id=9-867&t=IlPIWNnTmhzajxxp-1)
 
 
 ## 📁 Project Structure
